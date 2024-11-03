@@ -4,25 +4,25 @@ on:
   workflow_dispatch:
     inputs:
       MANIFEST_URL:
-        description: 'MANIFEST_URL (if want to use SSH keys, use git@github.com:XXXXX)'
+        description: 'TWRP 仓库 (if want to use SSH keys, use git@github.com:XXXXX)'
         required: true
-        default: 'https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp'
+        default: 'https://github.com/TC999/platform_manifest_twrp_omni'
       MANIFEST_BRANCH:
-        description: 'MANIFEST_BRANCH'
+        description: 'TWRP 分支'
         required: true
         default: 'twrp-12.1'
       DEVICE_TREE_URL:
-        description: 'DEVICE_TREE_URL'
+        description: '设备树仓库'
         required: true
-        default: 'https://github.com/TeamWin/android_device_asus_I003D'
+        default: 'https://github.com/TC999/n107_6739_66_p'
       DEVICE_TREE_BRANCH:
-        description: 'DEVICE_TREE_BRANCH'
+        description: '设备树分支'
         required: true
-        default: 'android-12.1'
+        default: 'main'
       DEVICE_PATH:
-        description: 'DEVICE_PATH'
+        description: '设备路径'
         required: true
-        default: 'device/asus/I003D'
+        default: 'device/alps/n107_6739_66_p'
       COMMON_TREE_URL:
         description: 'COMMON_TREE_URL (if no common tree, leave blank)'
         required: false
@@ -30,15 +30,15 @@ on:
         description: 'COMMON_PATH (if no common tree, leave blank)'
         required: false
       DEVICE_NAME:
-        description: 'DEVICE_NAME'
+        description: '设备名'
         required: true
-        default: 'I003D'
+        default: 'n107_6739_66_p'
       MAKEFILE_NAME:
-        description: 'MAKEFILE_NAME'
+        description: '配置文件名'
         required: true
-        default: 'twrp_I003D'
+        default: 'omni_n107_6739_66_p'
       BUILD_TARGET:
-        description: 'BUILD_TARGET'
+        description: '编译目标'
         required: true
         default: 'recovery'
 
